@@ -80,9 +80,9 @@
                     </div>
 
                     {{!-- Форма отправки сообщения --}}
-                    <form class="mt-3" action="/newmsg?id=" method="POST">
+                    <form class="mt-3" action="/newmsg?id={{chatId}}" method="POST">
                         <div class="input-group">
-                            <textarea class="form-control" name="newmsg?id={{chatId}}"></textarea>
+                            <textarea class="form-control" name="newmsg"></textarea>
                             <button class="btn btn-outline-secondary" type="submit">Отправить</button>
                         </div>
                     </form>

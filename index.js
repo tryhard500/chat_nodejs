@@ -107,3 +107,16 @@ app.get('/show',(req,res)=>{
         chatId: id
     });
 });
+
+app.post('/newmsg',(req,res)=>{
+    let id = req.query.id;
+    let msg = req.body.newmsg;
+    let chat = chats[id];
+    if (chat) {
+        chat.messages.push({
+            author: 'Я',
+            text: msg
+        });
+    }
+    res.redirect(`show?id=${id}`);
+});
